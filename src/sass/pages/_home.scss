@@ -1,0 +1,96 @@
+.space {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  .container-space {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 85%;
+      .earth {
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+          filter: drop-shadow(0px 0px 30px rgba($mainColor, 0.8));
+        }
+      }
+      .asteroid {
+        position: absolute;
+        border-radius: 50%;
+        width: var(--astreoidKM);
+        height: var(--astreoidKM);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border: 2px dashed rgba(#fff, 0.23);
+        transform: rotate(var(--asteroidLocation));
+        animation: rotate var(--asteroidSpeed) infinite;
+        .asteroid-img {
+          position: relative;
+          top: -5px;
+          display: flex;
+          justify-content: flex-start;
+          img {
+            width: var(--asteroidFeet);
+            height: var(--asteroidFeet);
+            filter: drop-shadow(0px 0px 30px rgba(#000, 0.3));
+          }
+        }
+      }
+    }
+  }
+}
+
+.loading{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  h1{
+    color: rgba(#fff, 0.4);
+    font-size: 4em;
+    font-weight: 800;
+    animation: loadingAnimate 1s infinite;
+  }
+}
+
+@keyframes loadingAnimate{
+  0%{
+    color: $mainColor;
+  }
+  25%{
+    color: indianred;
+  }
+  50%{
+    color: palegreen;
+  }
+  75%{
+    color: rebeccapurple;
+  }
+  100%{
+    color: lightyellow;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(var(--asteroidLocation));
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
