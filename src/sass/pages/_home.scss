@@ -52,7 +52,7 @@
   }
 }
 
-.loading{
+.loading {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
   height: 80%;
-  h1{
+  h1 {
     color: rgba(#fff, 0.4);
     font-size: 4em;
     font-weight: 800;
@@ -68,20 +68,20 @@
   }
 }
 
-@keyframes loadingAnimate{
-  0%{
+@keyframes loadingAnimate {
+  0% {
     color: $mainColor;
   }
-  25%{
+  25% {
     color: indianred;
   }
-  50%{
+  50% {
     color: palegreen;
   }
-  75%{
+  75% {
     color: rebeccapurple;
   }
-  100%{
+  100% {
     color: lightyellow;
   }
 }
